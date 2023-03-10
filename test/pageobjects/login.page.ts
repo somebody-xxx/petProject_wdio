@@ -9,15 +9,15 @@ class LoginPage extends Page {
     /**
      * define selectors using getter methods
      */
-    public get inputUsername(): ChainablePromiseElement<Promise<WebdriverIO.Element>> {
+    private get inputUsername(): ChainablePromiseElement<Promise<WebdriverIO.Element>> {
         return $('#username');
     }
 
-    public get inputPassword(): ChainablePromiseElement<Promise<WebdriverIO.Element>> {
+    private get inputPassword(): ChainablePromiseElement<Promise<WebdriverIO.Element>> {
         return $('#password');
     }
 
-    public get btnSubmit(): ChainablePromiseElement<Promise<WebdriverIO.Element>> {
+    private get btnSubmit(): ChainablePromiseElement<Promise<WebdriverIO.Element>> {
         return $('button[type="submit"]');
     }
 
