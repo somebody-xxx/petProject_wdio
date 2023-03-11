@@ -9,6 +9,10 @@ class LoginPage extends Page {
     /**
      * define selectors using getter methods
      */
+    private get header(): ChainablePromiseElement<Promise<WebdriverIO.Element>> {
+        return $('.example h2');
+    }
+
     private get inputUsername(): ChainablePromiseElement<Promise<WebdriverIO.Element>> {
         return $('#username');
     }
@@ -36,6 +40,21 @@ class LoginPage extends Page {
      */
     public open(): Promise<string> {
         return super.open('login');
+    }
+
+    /**
+     * Is login page opened?
+     */
+    public async isOpened(): Promise<void> {
+        let elem = await this.header();
+        await elem.isDisplayed();
+    }
+
+    /**
+     * get header text
+     */
+    public getHeaderText(): Promise<string> {
+        return this.header();
     }
 }
 
