@@ -46,7 +46,7 @@ class LoginPage extends Page {
      * Is login page opened?
      */
     public async isOpened(): Promise<void> {
-        let elem = await this.header();
+        let elem = await this.header;
         await elem.isDisplayed();
     }
 
@@ -54,7 +54,7 @@ class LoginPage extends Page {
      * get header text
      */
     public getHeaderText(): Promise<string> {
-        return this.header();
+        return this.header.getText();
     }
 }
 
