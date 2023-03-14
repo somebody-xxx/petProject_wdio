@@ -7,20 +7,29 @@ import Page from './page';
  */
 class LoginPage extends Page {
     /**
-     * define selectors using getter methods
+     * get header element
      */
     private get header(): ChainablePromiseElement<Promise<WebdriverIO.Element>> {
         return $('.example h2');
     }
 
+    /**
+     * get Username input element
+     */
     private get inputUsername(): ChainablePromiseElement<Promise<WebdriverIO.Element>> {
         return $('#username');
     }
 
+    /**
+     * get Password input element
+     */
     private get inputPassword(): ChainablePromiseElement<Promise<WebdriverIO.Element>> {
         return $('#password');
     }
 
+    /**
+     * get Submit button element
+     */
     private get btnSubmit(): ChainablePromiseElement<Promise<WebdriverIO.Element>> {
         return $('button[type="submit"]');
     }

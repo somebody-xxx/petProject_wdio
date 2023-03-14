@@ -8,12 +8,12 @@ describe('My Login application', () => {
     });
 
     it('should has correct header', async () => {
-        await expect(LoginPage.getHeaderText()).toBe('Login Page');
+        await expect(LoginPage.getHeaderText()).toHaveText('Login Page');
     });
 
     it('should login with valid credentials', async () => {
         await LoginPage.login('tomsmith', 'SuperSecretPassword!');
         await expect(SecurePage.flashAlert).toBeExisting();
-        await expect(SecurePage.flashAlert).toHaveTextContaining('You logged into a secure area!');
+        await expect(SecurePage.flashAlert).toHaveText('You logged into a secure area!');
     });
 });
