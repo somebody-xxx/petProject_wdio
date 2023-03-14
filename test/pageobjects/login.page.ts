@@ -35,8 +35,7 @@ class LoginPage extends Page {
     }
 
     /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
+     * login user (enter userName, password and click submit btn)
      */
     public async login (username: string, password: string): Promise<void> {
         await this.inputUsername.setValue(username);
