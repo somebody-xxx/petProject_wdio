@@ -4,7 +4,7 @@
 */
 export default class Page {
     /**
-    * Opens a sub page of the page
+    * Opens a sub-page of the page
     * @param path path of the sub page
     */
     public open(path: string): Promise<string> {
